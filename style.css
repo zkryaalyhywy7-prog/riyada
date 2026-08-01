@@ -1,13 +1,47 @@
-/* تنسيقات عامة */
-body { font-family: sans-serif; background-color: #1a1a1a; color: white; margin: 0; }
-.login-container { text-align: center; padding: 50px; }
-.btn-login { padding: 10px 20px; background: #2c5364; color: white; border: none; border-radius: 5px; cursor: pointer; }
+/* تنسيق 3D وتصميم عصري */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
+    color: white;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
-/* تنسيقات الصفحة الرئيسية */
-.main-container { padding: 20px; }
-section { background: rgba(255, 255, 255, 0.05); padding: 20px; margin-bottom: 20px; border-radius: 15px; }
+.login-container, .main-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
 
-/* تنسيقات الدورات */
-.courses-container { display: grid; gap: 20px; }
-.course-card { background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; text-align: center; }
-.course-link { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #2c5364; color: white; text-decoration: none; border-radius: 8px; }
+button, .course-link {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover, .course-link:hover {
+    transform: scale(1.05);
+    background: #0056b3;
+}
+
+section {
+    background: rgba(0,0,0,0.2);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
