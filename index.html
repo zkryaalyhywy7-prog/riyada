@@ -3,61 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>تسجيل الدخول - منصة ريادة</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            background-color: #0f172a; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            margin: 0; 
-        }
-        .login-card { 
-            background: #1e293b; 
-            padding: 40px; 
-            border-radius: 20px; 
-            color: white; 
-            width: 320px; 
-            text-align: center; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-        }
-        h2 { margin-bottom: 10px; color: #a5b4fc; }
-        p { margin-bottom: 25px; color: #94a3b8; font-size: 0.9em; }
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .login-box { width: 90%; max-width: 400px; }
         input { 
-            width: 100%; 
-            padding: 12px; 
-            margin: 10px 0; 
-            border-radius: 8px; 
-            border: 1px solid #334155; 
-            background: #0f172a; 
-            color: white;
-            box-sizing: border-box; 
+            width: 100%; padding: 12px; margin: 10px 0; border-radius: 10px; 
+            border: none; background: rgba(255,255,255,0.2); color: white;
         }
-        button { 
-            width: 100%; 
-            padding: 12px; 
-            margin-top: 15px;
-            background: #6366f1; 
-            border: none; 
-            color: white; 
-            border-radius: 8px; 
-            cursor: pointer; 
-            font-weight: bold;
-            font-size: 1em;
-        }
-        button:hover { background: #4f46e5; }
+        .btn-login { width: 100%; padding: 12px; background: #2c5364; border: none; color: white; border-radius: 10px; cursor: pointer; }
+        .forgot-pass { display: block; margin-top: 15px; color: #ddd; text-decoration: none; font-size: 14px; }
     </style>
 </head>
 <body>
 
-    <div class="login-card">
-        <h2>منصة ريادة</h2>
-        <p>مرحباً بك في منصتك الخاصة</p>
-        <input type="email" placeholder="البريد الإلكتروني">
-        <input type="password" placeholder="كلمة السر">
-        <!-- هذا الزر ينقلك لصفحة الدورات -->
-        <button onclick="window.location.href='courses.html'">تسجيل الدخول</button>
+    <div class="glass-card login-box">
+        <h1>تسجيل الدخول</h1>
+        <form>
+            <input type="text" placeholder="اسم المستخدم" required>
+            <input type="password" placeholder="كلمة السر" required>
+            <button type="submit" class="btn-login">دخول</button>
+ <form action="courses.html">
+    <input type="text" placeholder="اسم المستخدم" required>
+    <input type="password" placeholder="كلمة السر" required>
+    <button type="submit" class="btn-login">دخول</button>
+</form>
+
+        <a href="#" class="forgot-pass">نسيت كلمة السر؟</a>
     </div>
 
 </body>
