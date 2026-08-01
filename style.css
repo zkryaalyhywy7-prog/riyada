@@ -1,44 +1,54 @@
-/* تنسيق الخط الأساسي */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-
+/* هذا الكود يعطي ألواناً جذابة ومتدرجة للموقع */
 :root {
-  --glass-bg: rgba(255, 255, 255, 0.2);
-  --glass-border: rgba(255, 255, 255, 0.3);
-  --text-color: #333;
+  /* يمكنك تغيير هذه الألوان لأي درجة تحبها */
+  --gradient-start: #0f2027; 
+  --gradient-mid: #203a43;
+  --gradient-end: #2c5364;
 }
 
 body {
   font-family: 'Cairo', sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  /* الخلفية المتدرجة تعطي فخامة */
+  background: linear-gradient(to right, var(--gradient-end), var(--gradient-mid), var(--gradient-start));
   margin: 0;
   padding: 20px;
-  color: var(--text-color);
   min-height: 100vh;
 }
 
-/* الكلاس الخاص بالتأثير الزجاجي */
+/* هذا الكلاس سيجعل الأزرار أو المربعات زجاجية */
 .glass-card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px); /* لدعم متصفحات آيفون وسفاري */
-  border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  padding: 30px;
-  margin-bottom: 20px;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  color: white; /* لون النص داخل المربعات */
+  text-align: center;
 }
 
-/* تنسيق الروابط داخل القائمة */
-nav a {
+/* تنسيق الأزرار لتكون جذابة */
+button {
+  background: rgba(255, 255, 255, 0.2);
   color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  margin: 5px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-nav a:hover {
-  background: rgba(255, 255, 255, 0.3);
+button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.menu-container button {
+    width: 80%;
 }
