@@ -1,54 +1,43 @@
-/* هذا الكود يعطي ألواناً جذابة ومتدرجة للموقع */
-:root {
-  /* يمكنك تغيير هذه الألوان لأي درجة تحبها */
-  --gradient-start: #0f2027; 
-  --gradient-mid: #203a43;
-  --gradient-end: #2c5364;
+/* تنسيق الحاوية التي تجمع كل الدورات */
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 30px;
+    max-width: 1200px;
+    margin: auto;
 }
 
-body {
-  font-family: 'Cairo', sans-serif;
-  /* الخلفية المتدرجة تعطي فخامة */
-  background: linear-gradient(to right, var(--gradient-end), var(--gradient-mid), var(--gradient-start));
-  margin: 0;
-  padding: 20px;
-  min-height: 100vh;
+/* تنسيق بطاقة الدورة الواحدة */
+.course-card {
+    background: rgba(255, 255, 255, 0.1); /* تأثير الزجاج */
+    padding: 25px;
+    border-radius: 20px; /* زوايا دائرية */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: white;
+    transition: transform 0.3s ease; /* حركة عند تمرير الماوس */
 }
 
-/* هذا الكلاس سيجعل الأزرار أو المربعات زجاجية */
-.glass-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
-  padding: 20px;
-  color: white; /* لون النص داخل المربعات */
-  text-align: center;
+/* إضافة حركة بسيطة عند تمرير الماوس فوق البطاقة */
+.course-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
 }
 
-/* تنسيق الأزرار لتكون جذابة */
-button {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 15px 30px;
-  border-radius: 12px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: 0.3s;
+/* تنسيق زر الرابط */
+.course-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #2c5364;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
-button:hover {
-  background: rgba(255, 255, 255, 0.4);
-}
-.menu-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.menu-container button {
-    width: 80%;
+.course-link:hover {
+    background: #4a7a8d; /* لون أفتح قليلاً عند الضغط */
 }
