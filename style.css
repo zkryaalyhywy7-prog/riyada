@@ -1,43 +1,13 @@
-/* تنسيق الحاوية التي تجمع كل الدورات */
-.courses-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-    padding: 30px;
-    max-width: 1200px;
-    margin: auto;
-}
+/* تنسيقات عامة */
+body { font-family: sans-serif; background-color: #1a1a1a; color: white; margin: 0; }
+.login-container { text-align: center; padding: 50px; }
+.btn-login { padding: 10px 20px; background: #2c5364; color: white; border: none; border-radius: 5px; cursor: pointer; }
 
-/* تنسيق بطاقة الدورة الواحدة */
-.course-card {
-    background: rgba(255, 255, 255, 0.1); /* تأثير الزجاج */
-    padding: 25px;
-    border-radius: 20px; /* زوايا دائرية */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    text-align: center;
-    color: white;
-    transition: transform 0.3s ease; /* حركة عند تمرير الماوس */
-}
+/* تنسيقات الصفحة الرئيسية */
+.main-container { padding: 20px; }
+section { background: rgba(255, 255, 255, 0.05); padding: 20px; margin-bottom: 20px; border-radius: 15px; }
 
-/* إضافة حركة بسيطة عند تمرير الماوس فوق البطاقة */
-.course-card:hover {
-    transform: translateY(-10px);
-    background: rgba(255, 255, 255, 0.15);
-}
-
-/* تنسيق زر الرابط */
-.course-link {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 25px;
-    background: #2c5364;
-    color: white;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: background 0.3s;
-}
-
-.course-link:hover {
-    background: #4a7a8d; /* لون أفتح قليلاً عند الضغط */
-}
+/* تنسيقات الدورات */
+.courses-container { display: grid; gap: 20px; }
+.course-card { background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 15px; text-align: center; }
+.course-link { display: inline-block; margin-top: 10px; padding: 10px 20px; background: #2c5364; color: white; text-decoration: none; border-radius: 8px; }
